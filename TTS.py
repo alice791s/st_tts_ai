@@ -30,11 +30,5 @@ def TTS(text):
     except Exception as e:
         print(f"Exception: {e}")       
         
-if __name__ == "__main__":
-    text = "Hello, welcome to the Groq Voice Assistant!"
-    result = TTS(text)
-    if result:
-        print(f"Audio saved successfully to {result}")
-    else:
-        print("Failed to generate audio.")
+
 
