@@ -69,7 +69,9 @@ def main():
     if result:
         if "GET_TEXT" in result:
             user_input = result["GET_TEXT"]
+            st.write(f"Вы сказали: {user_input}")
             response = generate_response(user_input)  # Генерируем ответ с помощью AI-модели
+            st.write(f"Ответ ассистента: {response}")
             file = TTS(response)  # Конвертируем текстовый ответ в речь
             autoplay_audio(file)  # Проигрываем сгенерированный аудиофайл
 
